@@ -1,0 +1,163 @@
+/* ================================
+   Google Fonts:
+   Inter (Body) + Playfair Display (Headings)
+   Add this <link> in index.html:
+   https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap
+   ================================ */
+
+:root {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+               "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+   Global Reset
+   ================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ================================
+   Body
+   ================================ */
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: inherit;
+  color: inherit;
+  font-family: inherit;
+  margin:0px;
+}
+
+/* ================================
+   Typography
+   ================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", Georgia, serif;
+  letter-spacing: 0.4px;
+  color: inherit;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ================================
+   Links
+   ================================ */
+a {
+  font-weight: 500;
+  color: #7c8cff;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: #9aa5ff;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+button {
+  border-radius: 10px;
+  border: 1px solid transparent;
+  padding: 0.65em 1.4em;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+button:hover {
+  border-color: #7c8cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 3px solid #7c8cff;
+  outline-offset: 2px;
+}
+
+/* ================================
+   Forms (Hotel booking feel)
+   ================================ */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6em 0.8em;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: inherit;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: #7c8cff;
+}
+
+/* ================================
+   Light Mode
+   ================================ */
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a {
+    color: #4b5cff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f4f6ff;
+    color: #213547;
+  }
+
+  input,
+  select,
+  textarea {
+    background-color: #ffffff;
+    border-color: #ccc;
+    color: #213547;
+  }
+}

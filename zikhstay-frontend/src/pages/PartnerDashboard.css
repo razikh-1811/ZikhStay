@@ -1,0 +1,50 @@
+.dashboard-container {
+  padding: 40px 8%;
+  background: var(--dark);
+  min-height: 100vh;
+}
+
+.partner-form {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.form-grid input {
+  background: #222;
+  border: 1px solid #333;
+  padding: 12px;
+  color: white;
+  border-radius: 8px;
+}
+
+.upload-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.upload-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.upload-group label {
+  color: var(--gold);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.upload-group input {
+  color: #888;
+}

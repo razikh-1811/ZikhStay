@@ -1,0 +1,401 @@
+/* Container Layout */
+.my-bookings-page {
+  padding: 120px 8% 60px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #121212, #000000);
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.bookings-header {
+  text-align: left;
+  margin-bottom: 50px;
+  border-left: 4px solid #D4AF37;
+  padding-left: 25px;
+}
+
+.bookings-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #D4AF37;
+  margin-bottom: 10px;
+}
+
+.bookings-header p {
+  color: #888;
+  font-size: 1.1rem;
+}
+
+/* Booking List & Ticket Design */
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.booking-ticket {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-ticket:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Ticket Main Content */
+.ticket-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.2);
+}
+
+.hotel-brief .booking-id {
+  display: block;
+  font-size: 0.75rem;
+  color: #777;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.hotel-brief h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.booking-location {
+  color: #bbb;
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.booking-date {
+  color: #D4AF37;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Status & Price Blocks */
+.stay-info {
+  display: flex;
+  gap: 40px;
+  text-align: right;
+}
+
+.info-block label {
+  display: block;
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.status-badge {
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.confirmed {
+  background: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+  border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+.status-badge.pending {
+  background: rgba(255, 165, 2, 0.1);
+  color: #ffa502;
+  border: 1px solid rgba(255, 165, 2, 0.3);
+}
+
+.price-tag {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Actions Section */
+.ticket-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 100px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 30px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.btn-gold {
+  background: #D4AF37;
+  color: #000;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #000;
+}
+
+.luxury-loader {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(212, 175, 55, 0.1);
+  border-top-color: #D4AF37;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ticket-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .stay-info {
+    text-align: left;
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .ticket-actions {
+    justify-content: center;
+    flex-direction: column;
+  }
+}/* ... Keep all your existing container, ticket, and loading styles ... */
+
+/* --- BOOKING DETAILS MODAL --- */
+.booking-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.booking-modal-content {
+  width: 100%;
+  max-width: 550px;
+  background: #111;
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  animation: modalSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.3s;
+}
+
+.close-modal:hover {
+  background: #D4AF37;
+  color: #000;
+}
+
+/* Modal Header with Image */
+.modal-header {
+  position: relative;
+  height: 220px;
+}
+
+.modal-hotel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-title-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px;
+  background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.modal-title-overlay h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #D4AF37;
+  margin-bottom: 5px;
+}
+
+.modal-title-overlay p {
+  font-size: 0.9rem;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Modal Body Details */
+.modal-body {
+  padding: 30px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.detail-row.divider {
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.detail-item p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.modal-price {
+  color: #D4AF37 !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+}
+
+.modal-status-box {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-status-box label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* Modal Footer */
+.modal-footer {
+  padding: 0 30px 30px;
+}
+
+.modal-footer .btn-gold {
+  width: 100%;
+}
+
+/* Adjustments for Confirmation Badge in Modal */
+.status-badge.authorized {
+  background: rgba(46, 213, 115, 0.1);
+  color: #2ed573;
+  border: 1px solid rgba(46, 213, 115, 0.3);
+}
+
+/* Print Handling */
+@media print {
+  .my-bookings-page, .nav-links, .ticket-actions { display: none; }
+  .booking-modal-overlay { position: absolute; background: white; }
+  .booking-modal-content { border: none; color: black; }
+}

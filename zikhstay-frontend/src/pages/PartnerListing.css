@@ -1,0 +1,69 @@
+.partner-listings-container {
+  padding: 80px 8%;
+  background: #0a0a0a;
+  min-height: 100vh;
+  color: white;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.dashboard-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+}
+
+.add-btn {
+  background: #D4AF37;
+  color: black;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.listing-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.listing-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.listing-info {
+  padding: 20px;
+}
+
+.listing-info h3 { margin-bottom: 5px; }
+
+.price-tag {
+  color: #D4AF37;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.listing-actions {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.view-link { color: #888; text-decoration: none; font-size: 0.9rem; }
+.delete-btn { background: none; border: none; color: #ff4d4d; cursor: pointer; }

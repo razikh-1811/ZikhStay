@@ -1,0 +1,257 @@
+/* Container with a subtle gradient to give depth */
+.add-hotel-container {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #1a1a1a, #050505);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glassmorphism Card */
+.partner-form {
+  width: 100%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 60px;
+  border-radius: 40px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.form-header h2 {
+  font-family: 'Playfair Display', serif;
+  color: #D4AF37;
+  font-size: 2.8rem;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.form-header p {
+  color: #777;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Input Fields */
+.input-group {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.input-group input {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 18px 25px;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #D4AF37;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
+}
+
+.grid-inputs {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 30px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  margin: 40px 0;
+  opacity: 0.3;
+}
+
+/* Upload Section */
+.upload-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.file-input {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.file-input:hover {
+  border-color: #D4AF37;
+  background: rgba(212, 175, 55, 0.03);
+}
+
+.file-input label {
+  display: block;
+  color: #D4AF37;
+  font-size: 0.85rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.file-input input[type="file"] {
+  color: #666;
+  font-size: 0.8rem;
+  width: 100%;
+}
+
+/* Customizing the "Choose File" button */
+.file-input input[type="file"]::file-selector-button {
+  background: #222;
+  border: 1px solid #444;
+  color: #ddd;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-right: 15px;
+  font-size: 0.75rem;
+  transition: 0.3s;
+}
+
+.file-input input[type="file"]::file-selector-button:hover {
+  background: #D4AF37;
+  color: #000;
+  border-color: #D4AF37;
+}
+
+/* Submit Button */
+.submit-btn {
+  width: 100%;
+  margin-top: 40px;
+  background: #D4AF37;
+  color: #000;
+  padding: 22px;
+  border: none;
+  border-radius: 18px;
+  font-weight: 800;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(212, 175, 55, 0.4);
+}
+
+.submit-btn:disabled {
+  background: #444;
+  color: #777;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.small-loader {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .partner-form {
+    padding: 30px;
+  }
+  .grid-inputs, .upload-section {
+    grid-template-columns: 1fr;
+  }
+  .form-header h2 {
+    font-size: 2rem;
+  }
+}
+/* Amenities Section Styling */
+.amenities-selection {
+  margin: 25px 0;
+}
+
+.section-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #D4AF37;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.amenity-chip {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #bbb;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  user-select: none;
+}
+
+.amenity-chip:hover {
+  border-color: rgba(212, 175, 55, 0.5);
+  background: rgba(212, 175, 55, 0.05);
+  color: #fff;
+}
+
+.amenity-chip.active {
+  background: #D4AF37;
+  color: #000;
+  border-color: #D4AF37;
+  font-weight: 700;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Ensure chips don't look clickable when loading */
+.amenity-chip:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}

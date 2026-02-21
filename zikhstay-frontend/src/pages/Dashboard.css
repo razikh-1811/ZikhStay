@@ -1,0 +1,169 @@
+.dashboard-page {
+  padding: 40px 8%;
+  background: #050505;
+  min-height: 100vh;
+  color: white;
+}
+
+.dashboard-header { margin-bottom: 40px; }
+.dashboard-header h1 { font-family: 'Playfair Display', serif; color: #D4AF37; font-size: 2.5rem; }
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.stat-icon { font-size: 2rem; color: #D4AF37; }
+.stat-card label { color: #888; font-size: 0.9rem; text-transform: uppercase; }
+
+/* Admin Table */
+.admin-table-container {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th, .admin-table td { padding: 15px 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+.admin-table th { background: rgba(212, 175, 55, 0.1); color: #D4AF37; }
+
+.btn-approve {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Owner Mini Cards */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.mini-hotel-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  gap: 15px;
+}
+
+.mini-hotel-card img { width: 80px; height: 60px; object-fit: cover; border-radius: 5px; }
+.mini-info { flex: 1; }
+.status.pending { color: #ffa500; font-size: 0.8rem; }
+.status.active { color: #28a745; font-size: 0.8rem; }
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.status-pill {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.status-pill.live { color: #28a745; background: rgba(40, 167, 69, 0.1); }
+.status-pill.waiting { color: #ffa500; background: rgba(255, 165, 0, 0.1); }
+
+.btn-icon {
+  background: transparent;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+.btn-icon:hover { color: #D4AF37; }
+.btn-icon.delete:hover { color: #ff4d4d; }
+
+.empty-dashboard {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 50px;
+  color: #666;
+}
+.add-owner-box {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.add-owner-form {
+  display: flex;
+  gap: 15px;
+}
+
+.add-owner-form input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 15px;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+.add-owner-form input:focus {
+  border-color: #D4AF37;
+}
+
+.btn-delete-text {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.btn-delete-text:hover {
+  text-decoration: underline;
+}
+.status-badge.authorized {
+  color: #4caf50; /* Green */
+  background: rgba(76, 175, 80, 0.1);
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+}
+
+.dot-icon {
+  font-size: 8px;
+}

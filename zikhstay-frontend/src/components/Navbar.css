@@ -1,0 +1,25 @@
+.zikh-nav {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 20px 8%; background: #0a0a0a; border-bottom: 1px solid #222;
+}
+.nav-logo { font-size: 1.6rem; font-weight: 800; color: white; letter-spacing: 2px; }
+.nav-logo span { color: #D4AF37; }
+.nav-links { font-size: 2rem;font-weight:bold; display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: #ccc; text-decoration: none; font-size: 0.9rem; transition: 0.3s; }
+.nav-links a:hover { color: #D4AF37; }
+.nav-auth-btn {
+  background: #D4AF37; color: black; border: none; padding: 8px 20px;
+  border-radius: 4px; font-weight: 600; cursor: pointer;
+}
+.nav-logo {
+    text-decoration: none !important; /* Removes the underline */
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    /* ... keep your other logo styles here ... */
+}
+
+/* Also target it on hover to be safe */
+.nav-logo:hover {
+    text-decoration: none;
+}

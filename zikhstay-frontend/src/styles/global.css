@@ -1,0 +1,117 @@
+/* 1. CSS RESET - Removes the white gaps/margins seen in your image */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Premium Gold & Dark Theme Variables */
+:root {
+  --gold: #D4AF37;
+  --gold-gradient: linear-gradient(135deg, #D4AF37 0%, #F1D382 100%);
+  --dark: #0a0a0a;
+  --card-bg: #161616;
+  --text-main: #ffffff;
+  --text-dim: #b3b3b3;
+  --navbar-height: 80px;
+}
+
+body {
+  background-color: var(--dark);
+  color: var(--text-main);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  /* Add padding-top so content doesn't hide under the fixed navbar */
+  padding-top: var(--navbar-height);
+  margin:0px;
+}
+
+/* 2. NAVIGATION - Fixed and Glassmorphism */
+.zikh-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  background: rgba(10, 10, 10, 0.85); /* Transparent Dark */
+  backdrop-filter: blur(12px); /* Blur effect like iOS/Modern Web */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* 3. TYPOGRAPHY UPDATES */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Elegant Serif for luxury feel */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  text-transform: uppercase;
+}
+
+.nav-logo span {
+  color: var(--gold);
+}
+
+/* Hero Title Styling */
+.hero-overlay h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to bottom, #fff 40%, #a1a1a1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 4. BUTTONS */
+.btn-primary {
+  background: var(--gold-gradient);
+  color: #000;
+  font-weight: 700;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+  filter: brightness(1.1);
+}
+
+/* Glass Card Component */
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  transition: border 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--gold);
+}
+
+/* Utility classes */
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+}
